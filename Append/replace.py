@@ -12,9 +12,11 @@ def process_file():
             if row[0][0] == '0':
                 # Replace the first digit with '254'
                 new_num = '\'254' + row[0][1:]
+                # new_num = row[0][1:]
             else:
                 # Append '254' to the front of the number
                 new_num = '\'254' + row[0]
+                # new_num = row[0]
             new_rows.append([new_num])
     # Creates the output csv to which the new_rows will be saved.
     with open("output.csv", "w", newline='') as outputfile:

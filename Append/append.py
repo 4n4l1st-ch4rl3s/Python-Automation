@@ -8,7 +8,7 @@ def process_file():
     with open("Copy of Farmer-Data - Sheet22.csv", "r") as csvfile:
         csvFile = csv.reader(csvfile)
         # the new_row will contain the aappended value
-        new_rows = [['254'+row[0].replace(',','')] + row[1:] for row in csvFile]
+        new_rows = [['\'254'+row[0].replace(',','')] + row[1:] for row in csvFile]
     
     #creates the output csv to which the new_rows will be saved.
     with open("output.csv", "w", newline='') as outputfile:
